@@ -2,7 +2,7 @@ import s from './Options.module.css';
 
 export const Options = ({
    valueOption,
-    handelReset, 
+    // handelReset, 
     handelOnClick }) => {
   return (
     <ul className={s.decor}>
@@ -22,9 +22,9 @@ export const Options = ({
         </button>
       </li>
       <li>
-        <button className={s.decorBTN} onClick={handelReset} type="button">
+        {/* <button className={s.decorBTN} onClick={handelReset} type="button">
           {valueOption.reset}
-        </button>
+        </button> */}
       </li>
     </ul>
   );

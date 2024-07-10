@@ -27,9 +27,9 @@ export default function App() {
   function handelOnClick() {
     setClicked(clicked + 1);
   }
-  function handelReset() {
-    setClicked({ good: 0, neutral: 0, bad: 0 });
-  }
+//   function handelReset() {
+//     setClicked({ good: 0, neutral: 0, bad: 0 });
+//   }
   //*-------------------------------------------------------------------*//
 
   return (
@@ -37,7 +37,7 @@ export default function App() {
       <Description name={name} paragraph={paragraph} />
       <Options
         valueOption={valueOption}
-        handelReset={handelReset}
+        // handelReset={handelReset}
         handelOnClick={handelOnClick}
       />
       <Feedback valueOption={valueOption} />
