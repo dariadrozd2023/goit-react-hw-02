@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 import { Description } from './components/Description/Description';
@@ -8,6 +8,8 @@ import { Notification } from './components/Notification/Notification';
 
 export default function App() {
   const [clicked, setClicked] = useState({ good: 0, neutral: 0, bad: 0 });
+
+
   //*-------------------------------------------------------------------*//
 
   const name = 'Sip Happens Café';
@@ -40,11 +42,14 @@ export default function App() {
     setClicked({ good: 0, neutral: 0, bad: 0 });
   }
 
+  useEffect(() => {
+    console.log('hey you',clicked);  
+  },[clicked])
   //*-------------------------------------------------------------------*//
 
   return (
-    <>
-      <Description name={name} paragraph={paragraph} />
+    <section>
+      <Description name={name} paragraph={paragraph}/>
       <Options
         valueOption={valueOption}
         handleReset={handleReset}
@@ -60,6 +65,6 @@ export default function App() {
       ) : (
         <Notification message={message} />
       )}
-    </>
+    </section>
   );
 }
